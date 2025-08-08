@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Inchara</tile>
+  <meta name="description" content="Personal portfolio showcasing projects, skills and contact information." />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --max-width:1100px; --radius:14px; --gap:20px; color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{background:linear-gradient(180deg,#071028 0%, #071424 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+    .container{max-width:var(--max-width);margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:grid;place-items:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:#fff}
+
+    main{display:grid;grid-template-columns:1fr;gap:36px;margin-top:30px}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:var(--radius)}
+    .hero h1{margin:0;font-size:clamp(26px,4vw,40px)}
+    .hero p{margin:0;color:var(--muted);line-height:1.6}
+    .cta{margin-top:12px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;font-weight:600;text-decoration:none}
+
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap)}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(5,8,15,0.6)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .project-title{font-weight:700;margin:8px 0}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600;color:var(--muted)}
+
+    footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
+
+    /* responsive */
+    @media (max-width:800px){
+      .grid{grid-template-columns:1fr}
+      nav a{margin-left:10px}
+    }
+
+    /* subtle utilities */
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+
+    /* project image placeholder */
+    .thumb{height:140px;background:linear-gradient(135deg,#071428,#0b1630);border-radius:8px;display:grid;place-items:center;color:var(--muted);font-weight:600}
+
+    /* contact form simple */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px;color:inherit;outline:none}
+    input::placeholder,textarea::placeholder{color:var(--muted)}
+
+    .topline{display:flex;justify-content:space-between;gap:12px;align-items:center}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">YN</div>
+        <div>
+          <div style="font-weight:700">Your Name</div>
+          <div class="small muted">Frontend Developer & Problem Solver</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero card" aria-labelledby="intro">
+        <div class="topline">
+          <div>
+            <h1 id="intro">Hi — I'm Your Name.</h1>
+            <p class="muted">I build accessible, performant web apps and delightful user experiences. I care about clean code, design systems, and shipping value quickly.</p>
+            <div class="cta">
+              <a class="btn" href="#projects">See my work</a>
+              <a class="btn" href="mailto:you@example.com" style="background:transparent;border:1px solid rgba(255,255,255,0.08);margin-left:10px;color:var(--muted)">Email me</a>
+            </div>
+          </div>
+          <div style="justify-self:end;display:grid;place-items:center">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="120" height="120" rx="18" fill="url(#g)"/>
+              <defs>
+                <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#7c3aed" />
+                  <stop offset="1" stop-color="#06b6d4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h3 class="small">About me</h3>
+          <p class="muted small">I am a student/engineer who loves building projects. I focus on JavaScript, C++, and clean UI. I enjoy learning new algorithms and improving my problem solving skills.</p>
+          <div style="margin-top:12px">
+            <strong>Education</strong>
+            <div class="small muted">B.E. — Sahyadri College of Engineering (VTU)</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="small">Contact</h3>
+          <div class="small muted">Feel free to reach out for collaboration or freelance work.</div>
+          <div style="margin-top:12px" class="chips">
+            <div class="small muted">📧 you@example.com</div>
+            <div class="small muted">💼 LinkedIn</div>
+            <div class="small muted">🐙 GitHub</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 style="margin:6px 0">Projects</h2>
+        <div class="projects">
+          <!-- Project 1 -->
+          <article class="card" aria-labelledby="proj1">
+            <div class="thumb">Project Screenshot</div>
+            <h4 id="proj1" class="project-title">Note-taking App (Voice → Text)</h4>
+            <p class="muted small">A lightweight note-taking app that records voice and converts to text using Web Speech API. Searchable notes, dark mode, and export as .txt.</p>
+            <div style="margin-top:10px" class="chips small muted">HTML · JS · LocalStorage</div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card" aria-labelledby="proj2">
+            <div class="thumb">Project Screenshot</div>
+            <h4 id="proj2" class="project-title">Array Visualizer</h4>
+            <p class="muted small">A teaching tool to visualize sorting and array operations aimed at first-year engineering students.</p>
+            <div style="margin-top:10px" class="chips small muted">JS · Canvas</div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card" aria-labelledby="proj3">
+            <div class="thumb">Project Screenshot</div>
+            <h4 id="proj3" class="project-title">Portfolio Template</h4>
+            <p class="muted small">This single-file HTML/CSS portfolio template. Easy to fork and reuse.</p>
+            <div style="margin-top:10px" class="chips small muted">HTML · CSS</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="card">
+        <h3>Skills</h3>
+        <div class="skills" style="margin-top:10px">
+          <span class="skill">C++</span>
+          <span class="skill">C</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">Git</span>
+          <span class="skill">DSA (beginner)</span>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h3>Contact me</h3>
+        <p class="muted small">Or email me directly: <a href="mailto:you@example.com">you@example.com</a></p>
+        <form action="mailto:you@example.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <textarea name="message" rows="4" placeholder="Message"></textarea>
+          <div style="margin-top:8px">
+            <button type="submit" class="btn">Send</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="small muted">Built with ❤️ — Feel free to copy or customise this template.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Small smooth-scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id = a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    })
+  </script>
+</body>
+</html>
